@@ -45,19 +45,87 @@
           <nav>
             <ul class="navbar">
               <li><a href="index.html" title="Home">Home</a></li>
-              <li><a href="#FIXME" title="Home">News</a></li>
-              <li><a href="#FIXME" title="Home">Live cameras</a></li>
-              <li><a href="#FIXME" title="Home">Photos</a></li>
-              <li><a href="#FIXME" title="Home">Contact</a></li>
+              <li><a href="#FIXME" title="News">News</a></li>
+              <li><a href="#FIXME" title="Live_cameras">Live cameras</a></li>
+              <li><a href="#FIXME" title="Photos">Photos</a></li>
+              <li><a href="#FIXME" title="Contact">Contact</a></li>
             </ul>
           </nav>
         </div>
-
-        
       </header>
       <!--header ends here-->
       <!--main starts here-->
       <main>
+        <section class="weathersection">
+          <div class="wrapper">
+            <div class="searchbar">
+              <input id="inputweather" type="text" name="search" placeholder="Find your location...">
+              <input id="searchweather" type="submit" value="Find">
+            </div>
+            <div class="weather_card">
+              <div class="days">
+                <span id="day">Monday</span>
+                <span id="date">6 oct</span>
+              </div>
+              <span id="city">New York</span>
+              <span id="temp">23<span>&#8451;</span></span>
+              <span id="weather_icon"><img src="assets/images/icons/icon-1.svg" alt="weather_icon"></span>
+              <ul class="wind">
+                <li id="humidity">
+                  <img src="assets/images/icon-umberella@2x.png" alt="Humidity">
+                  <span>20%</span> 
+                </li>
+                <li id="wind_speed">
+                  <img src="assets/images/icon-wind@2x.png" alt="wind_speed">
+                  <span>18km/hr</span> 
+                </li>
+                <li id="compass">
+                  <img src="assets/images/icon-compass@2x.png" alt="Humidity">
+                  <span>east</span> 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="live_cameras">
+          <div class="wrapper">
+            <ul class="citycameras">
+              <li>
+                <figure class="city_image">
+                  <img src="assets/images/live-camera-1@2x.jpg" alt="new_York_Live">
+                  <img src="assets/images/play-button@2x.png" alt="play">
+                </figure>
+                <h3>New York</h3>
+                <span>8 Oct,8:00AM</span>
+              </li>
+              <li>
+                <figure class="city_image">
+                  <img src="assets/images/live-camera-2@2x.jpg" alt="Loss_Angeles_Live">
+                  <img src="assets/images/play-button@2x.png" alt="play">
+                </figure>
+                <h3>Loss Angeles</h3>
+                <span>8 Oct,8:00AM</span>
+              </li>
+              <li>
+                <figure class="city_image">
+                  <img src="assets/images/live-camera-3@2x.jpg" alt="Chicago_Live">
+                  <img src="assets/images/play-button@2x.png" alt="play">
+                </figure>
+                <h3>Chicago</h3>
+                <span>8 Oct,8:00AM</span>
+              </li>
+              <li>
+                <figure class="city_image">
+                  <img src="assets/images/live-camera-4@2x.jpg" alt="London_Live">
+                  <img src="assets/images/play-button@2x.png" alt="play">
+                </figure>
+                <h3>London</h3>
+                <span>8 Oct,8:00AM</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
 
       </main>
       <!--main ends here-->
