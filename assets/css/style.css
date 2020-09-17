@@ -435,3 +435,21 @@ header .wrapper {
 }
 
 /* live cameras ends here */
+
+/* weatherdescription section starts here */
+
+.weatherdescription{
+  background-color: #262936;
+}
+
+.weather_info{
+  display: flex;
+}
+
+.weather_info li{
+  width: 33%;
+}
+
+.weather_info li div{
+  float: right;
+}
