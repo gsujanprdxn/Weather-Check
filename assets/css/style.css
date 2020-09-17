@@ -165,6 +165,10 @@ sub { bottom: -.25em; }
   src: url(../vendor/font/Roboto/Roboto-Regular.ttf);
 }
 
+body{
+  font-family:"Roboto",sans-serif;
+}
+
 /* wrapper */
 .wrapper {
   max-width: 1350px;
@@ -240,8 +244,55 @@ header .wrapper {
   opacity: .8;
 }
 
-.navbar >li >a:hover{
+.navbar >li >a:hover,.active{
   border: 2px solid #009ad8;
   color: #009ad8;
   border-radius: 70px;
+}
+
+/* header ends here */
+
+.weathersection{
+  height: 330px;
+  width: 100%;
+  background: url(../images/photo-9@2x.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.weathersection .wrapper{
+  position: relative;
+}
+.searchbar{
+  padding: 5px;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  background: #1e202b;
+  border-radius: 20px;
+  line-height: 35px;
+}
+
+#searchweather{
+  width: 8%;
+  padding: 10px;
+  border: none;
+  float: right;
+  background-color: #009ad8;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+}
+
+#inputweather{
+  width: 90%;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 12px;
+  font-weight: 600;
 }
