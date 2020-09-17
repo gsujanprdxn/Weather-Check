@@ -338,6 +338,7 @@ header .wrapper {
 #temp{
   margin-left: 3%;
   margin-top: 3%;
+  font-family: "Roboto",sans-serif;
   font-size: 70px;
   color: #fff;
   font-weight: 900;
@@ -373,3 +374,64 @@ header .wrapper {
   font-size: 12px;
   opacity: .6;
 }
+
+/* livcamera  starts here */
+
+.live_cameras{
+  background-color: #1e202b;
+}
+.citycameras{
+  display: flex;
+  list-style: none;
+  width: 100%;
+ 
+}
+
+.live_cameras .wrapper{
+  padding: 300px 0px 100px 0px;
+}
+
+.live_cameras h2{
+  padding-left: 20px;
+  font-size: 30px;
+  font-family: "Roboto",sans-serif;
+  color: #fff;
+
+}
+
+.citycameras li{
+  width: 25%;
+  padding: 10px;
+}
+
+.citycameras li h3{
+  padding-top: 20px;
+  font-size: 15px;
+  color: #fff;
+  opacity: .8;
+}
+
+.citycameras li span{
+  font-size: 10px;
+  color: #fff;
+  opacity: .8;
+}
+
+.city_image{
+  position: relative;
+}
+
+.cityimage{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play{
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* live cameras ends here */
