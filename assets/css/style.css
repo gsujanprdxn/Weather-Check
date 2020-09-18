@@ -240,11 +240,7 @@ header .wrapper {
   text-transform: capitalize;
   opacity: .8;
 }
-/* .active{
-  border:2px solid #009ad8;
-  border-radius: 15px;
-  box-sizing: border-box;
-} */
+
 .navbar >li >a::before,.active{
   content: "";
   position: absolute;
@@ -288,11 +284,6 @@ header .wrapper {
   height: 100%;
   opacity: 1;
 }
-/* .navbar >li >a:hover,.active{
-  border: 2px solid #009ad8;
-  color: #009ad8;
-  border-radius: 15px;
-} */
 
 /* header ends here */
 
@@ -504,4 +495,52 @@ header .wrapper {
 .weather_info li .content{
   width: 80%;
   float: right;
+}
+
+/* weatherdescription section ends here */
+
+/* app_contents section starts here */
+
+.app_contents{
+  background-color: #1e202b;
+}
+
+.appcontent{
+  padding-top: 90px;
+  display: flex;
+  list-style: none;
+}
+
+.appcontent > li{
+  padding: 10px;
+  width: 33%;
+  border: 1px solid red;
+  color: #fff;
+}
+
+.appcontent > li h2{
+  font-size: 32px;
+  padding-bottom: 20px;
+  opacity: .8;
+}
+
+.appcontent > li ul{
+  list-style: none;
+}
+
+.feature_list h3{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.feature_list h3::before{
+  content: url(../images/arrow.png);
+  padding-right: 10px;
+}
+
+.feature_list p{
+  padding: 20px 0px 20px 22px;
+  font-size: 12px;
+  opacity: .7;
+  
 }
