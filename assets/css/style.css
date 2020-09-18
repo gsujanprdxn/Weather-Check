@@ -585,3 +585,112 @@ header .wrapper {
   padding: 5px;
 }
 /* awesome_photos ends here */
+
+/* footer starts here */
+footer{
+  padding-top: 60px;
+  background-color: #262936;
+}
+
+
+.subscription{
+  padding: 3px;
+  width: 70%;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #1e202b;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.subscription input[type="text"]{
+  padding-left: 2%;
+  width: 90%;
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+
+.subscription input[type="submit"]{
+  min-width: 70px;
+  width: 10%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  float: right;
+  outline: none;
+  color: #fff;
+  background-color: #009ad8;
+}
+
+
+.footer-social-icons{
+  display: flex;
+  list-style: none;
+  float: right;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icons a{
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-indent: -9999px;
+}
+
+.footer-social-icons li{
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  background-color: #1e202b;
+  border-radius: 50%;
+  position: relative;
+}
+
+footer p{
+  padding: 30px 0px;
+  font-size: 12px;
+  clear: both;
+  color: #fff;
+  opacity: .6;
+}
+.twitter::before{
+  content: "\f099";
+  float: right;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 500;
+  text-indent: 0;
+}
+
+.fb::before{
+  content: "\f39e";
+  float: right;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 500;
+  text-indent: 0;
+}
+
+
+.gplus::before{
+  content: "\f0d5";
+  float: right;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 500;
+  text-indent: 0;
+}
+
+.pinterest::before{
+  content: "\f099";
+  float: right;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 500;
+  text-indent: 0;
+}
+
