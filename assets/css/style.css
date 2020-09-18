@@ -528,6 +528,7 @@ header .wrapper {
   list-style: none;
 }
 
+/* featurelist starts here */
 .feature_list h3{
   font-size: 12px;
   font-weight: 600;
@@ -542,5 +543,25 @@ header .wrapper {
   padding: 20px 0px 20px 22px;
   font-size: 12px;
   opacity: .7;
-  
 }
+
+/* featurelist ends here */
+
+/* weather_analysis starts here */
+.analysis_list li{
+  padding: 8px 0px;
+  border-bottom: 1px solid #262936;
+}
+
+.analysis_list li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  opacity: .7;
+}
+
+.analysis_list li a::before{
+  content: url(../images/arrow.png);
+  padding-right: 10px;
+}
+/* weather_analysis ends here */
