@@ -26,7 +26,8 @@
     <link rel="shortcut icon" href="favicon.ico" />
 
     <!--font-awesome link for icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
@@ -69,17 +70,17 @@
               </div>
               <span id="city">New York</span>
               <span id="temp">23<span>&#8451;</span></span>
-              <span id="weather_icon"><img src="assets/images/icons/icon-1.svg" alt="weather_icon"></span>
+              <span class="weather_icon"><img src="assets/images/icons/icon-1.svg" alt="weather_icon"></span>
               <ul class="wind">
-                <li id="humidity">
+                <li class="humidity">
                   <img src="assets/images/icon-umberella@2x.png" alt="Humidity">
                   <span>20%</span> 
                 </li>
-                <li id="wind_speed">
+                <li class="wind_speed">
                   <img src="assets/images/icon-wind@2x.png" alt="wind_speed">
                   <span>18km/hr</span> 
                 </li>
-                <li id="compass">
+                <li class="compass">
                   <img src="assets/images/icon-compass@2x.png" alt="Humidity">
                   <span>east</span> 
                 </li>
@@ -89,35 +90,36 @@
         </section>
         <section class="live_cameras">
           <div class="wrapper">
+            <h2>Live cameras</h2>
             <ul class="citycameras">
               <li>
                 <figure class="city_image">
-                  <img src="assets/images/live-camera-1@2x.jpg" alt="new_York_Live">
-                  <img src="assets/images/play-button@2x.png" alt="play">
+                  <img src="assets/images/live-camera-1@2x.jpg" alt="new_York_Live" class="cityimage">
+                  <img src="assets/images/play-button@2x.png" alt="play" class="play">
                 </figure>
                 <h3>New York</h3>
                 <span>8 Oct,8:00AM</span>
               </li>
               <li>
                 <figure class="city_image">
-                  <img src="assets/images/live-camera-2@2x.jpg" alt="Loss_Angeles_Live">
-                  <img src="assets/images/play-button@2x.png" alt="play">
+                  <img src="assets/images/live-camera-2@2x.jpg" alt="Loss_Angeles_Live" class="cityimage">
+                  <img src="assets/images/play-button@2x.png" alt="play" class="play">
                 </figure>
                 <h3>Loss Angeles</h3>
                 <span>8 Oct,8:00AM</span>
               </li>
               <li>
                 <figure class="city_image">
-                  <img src="assets/images/live-camera-3@2x.jpg" alt="Chicago_Live">
-                  <img src="assets/images/play-button@2x.png" alt="play">
+                  <img src="assets/images/live-camera-3@2x.jpg" alt="Chicago_Live" class="cityimage">
+                  <img src="assets/images/play-button@2x.png" alt="play" class="play">
                 </figure>
                 <h3>Chicago</h3>
                 <span>8 Oct,8:00AM</span>
               </li>
               <li>
                 <figure class="city_image">
-                  <img src="assets/images/live-camera-4@2x.jpg" alt="London_Live">
-                  <img src="assets/images/play-button@2x.png" alt="play">
+                  <img src="assets/images/live-camera-4@2x.jpg" alt="London_Live" class="cityimage">
+                  <img src="assets/images/play-button@2x.png" alt="play" class="play">
                 </figure>
                 <h3>London</h3>
                 <span>8 Oct,8:00AM</span>
@@ -157,7 +159,7 @@
         </section>
         <section class="app_contents">
           <div class="wrapper">
-            <ul class="app_content">
+            <ul class="appcontent">
               <li class="app_feature">
                 <h2>Application features</h2>
                 <ul class="feature_list">
@@ -178,13 +180,13 @@
               <li class="weather_analysis">
                 <h2>weather analyssis</h2>
                 <ul class="analysis_list">
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, asperiores.</li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
+                  <li><a href="#FIXME">amet consectetur adipisicing elit. Tempora, asperiores.</a></li>
                 </ul>
               </li>
               <li class="awesome_photos">
@@ -256,7 +258,7 @@
             <li><a href="https://google.com" title="googleplus" target="_blank" class="gplus">googleplus</i></a></li>
             <li><a href="https://www.pinterest.com/" title="pinterest" target="_blank" class="pinterest">pinterest</a></li> 					
           </ul>
-          <span>Copyright 2020 company name.designed by Themezy.All rights reserved</span>
+          <p>Copyright 2020 company name.designed by Themezy.All rights reserved</p>
 
         </div>
       </footer>
