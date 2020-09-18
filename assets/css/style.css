@@ -219,36 +219,80 @@ header .wrapper {
 
 /* navbar strats here */
 .navbar{
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
 }
 
-.navbar >li{
-  margin-left: 5px;
+.navbar > li{
+  list-style-position: inside;
 }
 
 .navbar >li >a{
   padding: 7px 24px;
+  margin: 0 7px;
+  position: relative;
   color: #fff;
   font-size: 12px;
   font-family: "Roboto",sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
+  text-transform: capitalize;
   opacity: .8;
 }
+/* .active{
+  border:2px solid #009ad8;
+  border-radius: 15px;
+  box-sizing: border-box;
+} */
+.navbar >li >a::before,.active{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-top: 2px solid #009ad8;
+  border-left: 2px solid #009ad8;
+  border-radius: 15px;
+  transform-origin: left;
+  transition: .5s;
+  box-sizing: border-box;
+  opacity: 0;
+}
 
-.navbar >li >a:hover,.active{
+.navbar >li >a::after,.active{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-bottom: 2px solid #009ad8;
+  border-right: 2px solid #009ad8;
+  border-radius: 15px;
+  transform-origin: left;
+  transition: .5s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.navbar >li >a:hover::before,.active{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.navbar >li >a:hover::after{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+/* .navbar >li >a:hover,.active{
   border: 2px solid #009ad8;
   color: #009ad8;
-  border-radius: 70px;
-}
+  border-radius: 15px;
+} */
 
 /* header ends here */
 
@@ -273,7 +317,7 @@ header .wrapper {
   background: #1e202b;
   border-radius: 20px;
   line-height: 25px;
-  transform: translate(-50%,50%);
+  transform: translate(-50%,-50%);
 }
 
 #searchweather{
@@ -444,12 +488,20 @@ header .wrapper {
 
 .weather_info{
   display: flex;
+  list-style: none;
+  padding: 80px 0px;
 }
 
 .weather_info li{
   width: 33%;
 }
 
-.weather_info li div{
+.weather_info li span{
+  font-size: 25px;
+  color: #009ad8;
+}
+
+.weather_info li .content{
+  width: 80%;
   float: right;
 }
