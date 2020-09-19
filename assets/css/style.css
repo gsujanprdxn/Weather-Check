@@ -353,10 +353,15 @@ header .wrapper {
   opacity: 0.8;
 }
 
-.weather_card .days #date{
-  float: right;
+#month,#date{
   color: #fff;
+  padding-left: 5px;
 }
+
+.weather_card .days div{
+  float: right;
+}
+
 
 .weather_card .days #day{
   color: #fff;
