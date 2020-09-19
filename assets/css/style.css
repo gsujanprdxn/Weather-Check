@@ -748,6 +748,11 @@ footer p{
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .wrapper {
+    width: 95%; 
+    margin: 0 auto;
+  }
+
   .hamburger-menu{
     display: flex;
     position: absolute;
@@ -765,6 +770,9 @@ footer p{
     text-align: center;
   }
   .navbar{
+    margin: 30px 0px 5px 0px;
+    border-radius: 15px;
+    background-color: #262936 ;
     color: white;
     width: 100%;
     flex-direction: column;
@@ -772,6 +780,24 @@ footer p{
 
   .navbar li{
     width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid #2e303d;
+    opacity: .7;
+  }
+
+  .navbar li:last-child{
+    border: none;
+  }
+  .navbar >li >a{
+    font-weight: 400;
+  }
+
+  .navbar >li >a:hover,.active{
+    color: #009ad8;
+  }
+
+  .navbar >li >a::after,.navbar >li >a::before,.active{
+    border: none;
   }
   .logo{
     position: absolute;
