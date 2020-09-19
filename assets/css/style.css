@@ -304,10 +304,13 @@ header .wrapper {
   position: relative;
 }
 .searchbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 5px;
   width: 79%;
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: 50%;
   background: #1e202b;
   border-radius: 2rem;
@@ -315,29 +318,28 @@ header .wrapper {
   transform: translate(-50%,-50%);
 }
 
-#searchweather{
-  width: 8%;
-  padding: 1rem;
-  border: none;
-  float: right;
-  background-color: #009ad8;
-  border-radius: 2rem;
+.searchbar input[type="text"]{
+  padding-left: 2%;
+  width: 70%;
   color: #fff;
-  font-weight: 600;
+  background-color: inherit;
   outline: none;
+  border: none;
 }
 
-#inputweather{
-  width: 90%; 
-  padding-left: 1rem;
+.searchbar input[type="submit"]{
+  padding: 10px;
+  min-width: 70px;
+  width: 10%;
+  height: 100%;
   border: none;
-  border-radius: 2rem;
+  border-radius: 5rem;
+  float: right;
   outline: none;
-  background-color: inherit;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 3.5rem;
+  color: #fff;
+  background-color: #009ad8;
 }
+
 
 .weather_card{
   width: 40%;
@@ -431,7 +433,7 @@ header .wrapper {
 }
 
 .live_cameras .wrapper{
-  padding: 30rem 0rem 10rem 0rem;
+  padding: 22rem 0rem 6rem 0rem;
 }
 
 .live_cameras h2{
@@ -633,6 +635,7 @@ footer{
 }
 
 
+
 .footer-social-icons{
   display: flex;
   list-style: none;
@@ -782,7 +785,7 @@ footer p{
     text-align: center;
   }
   .navbar{
-    margin: 30px 0px 5px 0px;
+    margin: 5rem 0px .5rem 0px;
     border-radius: 15px;
     background-color: #262936 ;
     color: white;
@@ -820,6 +823,34 @@ footer p{
 
 @media only screen and (max-width: 768px) {
   html{
-    font-size: 30%;
+    font-size: 40%;
+  }
+
+  .logo h1{
+    width: 35%;
+  }
+  .logo span{
+    font-size: 3rem;
+  }
+  .logo p{
+    font-size: 1.4rem;
+  }
+  .hamburger-menu{
+    top: 4rem;
+  }
+  .navbar{
+    margin: 9rem 0px .5rem 0px;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .weather_card{
+    width: 90%;
+  }
+  .searchbar{
+    width: 90%;
+  }
+  #searchweather{
+    width: 10%;
   }
 }
