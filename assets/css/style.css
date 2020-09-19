@@ -490,7 +490,7 @@ header .wrapper {
 .weather_info{
   display: flex;
   list-style: none;
-  padding: 8rem 0px;
+  padding: 7rem 0px;
 }
 
 .weather_info li{
@@ -502,9 +502,23 @@ header .wrapper {
   color: #009ad8;
 }
 
-.weather_info li .content{
+.content{
   width: 80%;
   float: right;
+  color: #fff;
+}
+
+.content h2{
+  font-size: 1.4rem;
+  opacity: .9;
+}
+
+.content p{
+  font-size: 1.2rem;
+  padding: 1rem 2rem 1rem 0rem;
+  opacity: .6;
+  letter-spacing: .5px;
+  line-height: 1.8rem;
 }
 
 /* weatherdescription section ends here */
@@ -845,12 +859,36 @@ footer p{
 
 @media only screen and (max-width: 645px) {
   .weather_card{
-    width: 90%;
+    width: 93%;
   }
   .searchbar{
-    width: 90%;
+    width: 93%;
+    border-radius: 5rem;
   }
   #searchweather{
     width: 10%;
   }
+  .citycameras{
+    flex-direction: column;
+  }
+
+  .citycameras li{
+    width: 100%;
+  }
+
+  .live_cameras h2{
+    font-size: 8rem;
+    font-family: "Roboto",sans-serif;
+  }
+
+  .citycameras li h3{
+    font-size: 3.5rem;
+  }
+  .citycameras li span{
+    font-size: 2rem;
+    line-height: 6rem;
+  }
+  .live_cameras .wrapper {
+    padding: 33rem 0rem 15rem 0rem;
+}
 }
