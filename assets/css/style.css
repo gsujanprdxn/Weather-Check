@@ -434,6 +434,10 @@ header .wrapper {
   margin-bottom: 5%;
   align-items: center;
 }
+.wind li{
+  display: flex;
+  align-items: center;
+}
 
 .wind img{
   width: 30%;
