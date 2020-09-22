@@ -193,12 +193,12 @@ header .wrapper {
   -ms-flex-pack: justify;
   justify-content: space-between;
   align-items: center;
+}
 
 /* logo starts here */
-}
 .logo h1{
-  width: 27%;
   padding-right: 1rem;
+  width: 27%;
   float: left;
 }
 
@@ -241,10 +241,12 @@ header .wrapper {
   text-transform: capitalize;
   opacity: .8;
 }
+
 .active{
   border: 2px solid #009ad8;
   border-radius: 1.5rem;
 }
+
 .navbar >li >a::before{
   content: "";
   position: absolute;
@@ -291,27 +293,26 @@ header .wrapper {
 
 /* header ends here */
 
+/* weather section starts here */
 .weathersection{
   height: 33rem;
   width: 100%;
+  position: relative;
   background: url(../images/banner@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.weathersection{
-  position: relative;
-}
 .searchbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 5px;
   width: 79%;
   position: absolute;
   top: 25%;
   left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #1e202b;
   border-radius: 2rem;
   line-height: 2.5rem;
@@ -340,7 +341,6 @@ header .wrapper {
   background-color: #009ad8;
 }
 
-
 .weather_card{
   width: 40%;
   border-radius: 1.5rem;
@@ -354,17 +354,17 @@ header .wrapper {
 
 #error{
   padding: 5% 3%;
+  width: 100%;
+  height: 80%;
   position: absolute;
   top: 15%;
   left: 0;
-  z-index: 10000;
-  width: 100%;
-  height: 80%;
   background-color: #323544;
-  visibility: hidden;
   color: #009ad8;
   font-size: 5rem;
   font-weight: 600;
+  visibility: hidden;
+  z-index: 10000;
 }
 
 #error h2, #error span{
@@ -393,42 +393,33 @@ header .wrapper {
   padding-left: .5rem;
 }
 
-.weather_card .days div{
-  float: right;
-}
-
-.weather_card .days div{
-  float: right;
-}
-
-
-.weather_card .days #day{
-  color: #fff;
-}
+.weather_card .days div{float: right;}
+.weather_card .days div{float: right;}
+.weather_card .days #day{color: #fff;}
 
 #city{
   margin-left: 3%;
   margin-top: 8%;
   font-size: 1.7rem;
-  font-family: "Roboto",sans-serif;
   color: #fff;
+  font-family: "Roboto",sans-serif;
   display: block;
 }
+
 #temp{
   margin-left: 3%;
   margin-top: 3%;
+  color: #fff;
   font-family: "Roboto",sans-serif;
   font-size: 7rem;
-  color: #fff;
   font-weight: 900;
 }
 
 .weather_icon{
   padding-left: 1rem;
-  display: inline-block;
   width: 15%;
+  display: inline-block;
   font-size: 7rem;
-
 }
 
 .weather_icon >img{
@@ -454,51 +445,45 @@ header .wrapper {
   opacity: .6;
 }
 
-/* livcamera  starts here */
+/* weather section ends here */
 
-.live_cameras{
-  background-color: #1e202b;
-}
+/* livcamera  starts here */
+.live_cameras{background-color: #1e202b;}
+
 .citycameras{
+  width: 100%;
   display: flex;
   list-style: none;
-  width: 100%;
- 
 }
 
-.live_cameras .wrapper{
-  padding: 22rem 0rem 6rem 0rem;
-}
+.live_cameras .wrapper{padding: 22rem 0rem 6rem 0rem;}
 
 .live_cameras h2{
   padding-left: 2rem;
+  color: #fff;
   font-size: 3rem;
   font-family: "Roboto",sans-serif;
-  color: #fff;
-
 }
 
 .citycameras li{
-  width: 25%;
   padding: 1rem;
+  width: 25%;  
 }
 
 .citycameras li h3{
   padding-top: 2rem;
-  font-size: 1.5rem;
   color: #fff;
+  font-size: 1.5rem;
   opacity: .8;
 }
 
 .citycameras li span{
-  font-size: 1rem;
   color: #fff;
+  font-size: 1rem;
   opacity: .8;
 }
 
-.city_image{
-  position: relative;
-}
+.city_image{position: relative;}
 
 .cityimage{
   width: 100%;
@@ -517,23 +502,19 @@ header .wrapper {
 
 /* weatherdescription section starts here */
 
-.weatherdescription{
-  background-color: #262936;
-}
+.weatherdescription{background-color: #262936;}
 
 .weather_info{
+  padding: 7rem 0px;
   display: flex;
   list-style: none;
-  padding: 7rem 0px;
 }
 
-.weather_info li{
-  width: 33%;
-}
+.weather_info li{width: 33%;}
 
 .weather_info li span{
-  font-size: 2.5rem;
   color: #009ad8;
+  font-size: 2.5rem;  
 }
 
 .content{
@@ -548,8 +529,8 @@ header .wrapper {
 }
 
 .content p{
-  font-size: 1.2rem;
   padding: 1rem 2rem 1rem 0rem;
+  font-size: 1.2rem;  
   opacity: .6;
   letter-spacing: .5px;
   line-height: 1.8rem;
@@ -559,9 +540,7 @@ header .wrapper {
 
 /* app_contents section starts here */
 
-.app_contents{
-  background-color: #1e202b;
-}
+.app_contents{background-color: #1e202b;}
 
 .appcontent{
   padding: 8rem 0px;
@@ -576,14 +555,12 @@ header .wrapper {
 }
 
 .appcontent > li h2{
-  font-size: 3.2rem;
   padding-bottom: 2rem;
+  font-size: 3.2rem;
   opacity: .8;
 }
 
-.appcontent > li ul{
-  list-style: none;
-}
+.appcontent > li ul{list-style: none;}
 
 /* featurelist starts here */
 .feature_list h3{
@@ -601,7 +578,6 @@ header .wrapper {
   font-size: 1.2rem;
   opacity: .7;
 }
-
 /* featurelist ends here */
 
 /* weather_analysis starts here */
@@ -634,9 +610,7 @@ header .wrapper {
   justify-content: space-around;
 }
 
-.photos li{
-  width: 33%;
-}
+.photos li{width: 33%;}
 
 .photo img{
   width: 100%;
@@ -682,8 +656,6 @@ footer{
   color: #fff;
   background-color: #009ad8;
 }
-
-
 
 .footer-social-icons{
   display: flex;
@@ -742,7 +714,6 @@ footer p{
   text-indent: 0;
 }
 
-
 .gplus::before{
   content: "\f0d5";
   float: right;
@@ -759,6 +730,7 @@ footer p{
   text-indent: 0;
 }
 
+/* hamburgermenu starts here */
 .hamburger-menu{
   width: 40px;
   height: 40px;
@@ -811,11 +783,11 @@ footer p{
   transition: .5s ease;
 }
 
-.change.hamburger-menu div{
-  background-color: transparent;
-  
-}
+.change.hamburger-menu div{background-color: transparent; }
 
+/* hamberger menu ends here */
+
+/* preloader starts here */
 #loading{
   position: fixed;
   width: 100%;
@@ -824,7 +796,7 @@ footer p{
               url(../images/Eclipse-1s-200px.gif) no-repeat center;
   z-index: 9999;
 }
-
+/* preloader ends here */
 
 /* styles for gallary page */
 .stars{
@@ -930,9 +902,7 @@ footer p{
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-  html{
-    font-size: 50%;
-  }
+  html{font-size: 50%;}
 
   .wrapper {
     width: 95%; 
@@ -951,11 +921,13 @@ footer p{
     flex-direction: column;
     justify-content: flex-start;
   }
+
   nav{
     width: 100%;
     text-align: center;
     display: none;
   }
+
   .navbar{
     margin: 5rem 0px .5rem 0px;
     border-radius: 15px;
@@ -972,20 +944,11 @@ footer p{
     opacity: .7;
   }
 
-  .navbar li:last-child{
-    border: none;
-  }
-  .navbar >li >a{
-    font-weight: 400;
-  }
-
-  .navbar >li >a:hover,.active{
-    color: #009ad8;
-  }
-
-  .navbar >li >a::after,.navbar >li >a::before,.active{
-    border: none;
-  }
+  .navbar li:last-child{border: none;}
+  .navbar >li >a{font-weight: 400;}
+  .navbar >li >a:hover,.active{color: #009ad8;}
+  .navbar >li >a::after,.navbar >li >a::before,.active{border: none;}
+  
   .logo{
     position: absolute;
     top: 30px;
@@ -994,94 +957,48 @@ footer p{
 }
 
 @media only screen and (max-width: 768px) {
-  header{
-    padding-bottom: 6rem;
-  }
-  html{
-    font-size: 40%;
-  }
-
-  .logo h1{
-    width: 35%;
-  }
-  .logo span{
-    font-size: 3rem;
-  }
-  .logo p{
-    font-size: 1.4rem;
-  }
-  .hamburger-menu{
-    top: 4rem;
-  }
-  .navbar{
-    margin: 9rem 0px .5rem 0px;
-  }
-  .cards{
-    flex-direction: column;
-  }
-
-  .cards > li{
-    width: 98%;
-  }
-
-  .contents h2{
-    font-size: 4rem;
-  }
-  .contents p{
-    font-size: 3.5rem;
-  }
+  header{padding-bottom: 6rem;}
+  html{font-size: 40%;}
+  .logo h1{width: 35%;}
+  .logo span{font-size: 3rem;}
+  .logo p{font-size: 1.4rem;}
+  .hamburger-menu{top: 4rem;}
+  .navbar{margin: 9rem 0px .5rem 0px;}
+  .cards{flex-direction: column;}
+  .cards > li{width: 98%;}
+  .contents h2{font-size: 4rem;}
+  .contents p{font-size: 3.5rem;}
 
 }
 
 @media only screen and (max-width: 645px) {
-  header{
-    padding-bottom: 6rem;
-  }
+  header{padding-bottom: 6rem;}
+  .weathersection{height: 60rem;}
+  .weather_card{width: 93%;}
+  .card-conatiner{padding: 2%;}
+  .weather_card .days {padding: 3.5rem 1.1rem;}
+  #city{font-size: 3rem;}
+  .weather_card .days{font-size: 2rem;}
+  .wind span{font-size: 3rem;}
+  #temp{font-size: 15rem;}
+  #searchweather{width: 10%;}
+  .citycameras{flex-direction: column;}
+  .citycameras li{width: 100%;}
+  .citycameras li h3{font-size: 3.5rem;}
+  .live_cameras .wrapper {padding: 33rem 0rem 15rem 0rem;}
+  .appcontent {flex-direction: column;}
+  .appcontent > li h2 {font-size: 6.5rem;}
+  .analysis_list li a {font-size: 2.2rem;}
+  .subscription input[type="submit"] {width: 30%;}
 
-  .weathersection{
-    height: 60rem;
-  }
-  .weather_card{
-    width: 93%;
-  }
-  .card-conatiner{
-    padding: 2%;
-  }
-  .weather_card .days {
-    padding: 3.5rem 1.1rem;
-  }
-  
-
-  #city{
-    font-size: 3rem;
-  }
-
-  .weather_card .days{
-    font-size: 2rem;
-  }
-  .wind span{
-    font-size: 3rem;
-  }
-  #temp{
-    font-size: 15rem;
-  }
   .weather_icon{
     display: block;
     width: 25%;
   }
+
   .searchbar{
     width: 93%;
     border-radius: 5rem;
-  }
-  #searchweather{
-    width: 10%;
-  }
-  .citycameras{
-    flex-direction: column;
-  }
-
-  .citycameras li{
-    width: 100%;
   }
 
   .live_cameras h2{
@@ -1089,49 +1006,37 @@ footer p{
     font-family: "Roboto",sans-serif;
   }
 
-  .citycameras li h3{
-    font-size: 3.5rem;
-  }
   .citycameras li span{
     font-size: 2rem;
     line-height: 6rem;
   }
-  .live_cameras .wrapper {
-    padding: 33rem 0rem 15rem 0rem;
-  }
+
   .weather_info {
     flex-direction: column;
     padding: 10rem 0px;
   }
+
   .weather_info li {
     width: 100%;
     padding-bottom: 1rem;
   }
-  .weather_info li span {
-    font-size: 4.5rem;
-  }
-  .content h2 {
-    font-size: 3rem;
-  }
-  .content{
-    width: 83%;
-  }
+
+  .weather_info li span {font-size: 4.5rem;}
+  .content h2 {font-size: 3rem;}
+  .content{width: 83%;}
+
   .content p {
     font-size: 2.5rem;
     padding: 1rem 4rem 1rem 0rem;
     letter-spacing: 0.25px;
     line-height: 5rem;
   }
-  .appcontent {
-    flex-direction: column;
-  }
+  
   .appcontent > li {
     padding: 1rem;
     width: 100%;
   }
-  .appcontent > li h2 {
-    font-size: 6.5rem;
-  }
+  
   .feature_list h3 {
     font-size: 3rem;
     letter-spacing: .1rem;
@@ -1141,19 +1046,10 @@ footer p{
     line-height: 4rem;
   }
 
-  .analysis_list li a {
-    font-size: 2.2rem;
-  }
-
   .subscription {
     padding: .5rem;
     width: 100%;
-    height: 7rem;
-    
-  }
-
-  .subscription input[type="submit"] {
-    width: 30%;
+    height: 7rem; 
   }
 
   .footer-social-icons {
