@@ -229,7 +229,7 @@ header .wrapper {
 }
 
 .navbar >li >a{
-  padding: .7rem 2.4rem;
+  padding: .7rem 2rem;
   margin: 0 .7rem;
   position: relative;
   color: #fff;
@@ -352,6 +352,35 @@ header .wrapper {
   overflow: hidden;
 }
 
+#error{
+  padding: 5% 3%;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 80%;
+  background-color: #323544;
+  visibility: hidden;
+  color: #009ad8;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+#error h2, #error span{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+#error img{
+  padding: 1rem;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  height: 80%;
+}
+
 .weather_card .days{
   background-color: #2d303d;
   padding: 1.5rem 1.1rem;
@@ -367,6 +396,11 @@ header .wrapper {
 .weather_card .days div{
   float: right;
 }
+
+.weather_card .days div{
+  float: right;
+}
+
 
 .weather_card .days #day{
   color: #fff;
@@ -671,6 +705,11 @@ footer{
   text-indent: -9999px;
 }
 
+.footer-social-icons li:hover{
+  transform: scale(1.1);
+  transition: ease;
+}
+
 .footer-social-icons li{
   width: 4rem;
   height: 4rem;
@@ -739,6 +778,7 @@ footer p{
   border-radius: 20%;
   position: relative;
   font-size: 0px;
+  transition: .5s ease;
 }
 
 .hamburger-menu div::before,
@@ -750,6 +790,7 @@ footer p{
   height: inherit;
   background-color: #009ad8;
   border-radius: 20%;
+  transition: .5s ease;
 }
 
 .hamburger-menu div::before{
@@ -762,15 +803,130 @@ footer p{
 
 .change.hamburger-menu div::before{
   transform: translateY(0) rotate(-45deg);
+  transition: .5s ease;
 }
 
 .change.hamburger-menu div::after{
   transform: translateY(0) rotate(45deg);
+  transition: .5s ease;
 }
 
 .change.hamburger-menu div{
   background-color: transparent;
+  
 }
+
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #1e202b
+              url(../images/Eclipse-1s-200px.gif) no-repeat center;
+  z-index: 9999;
+}
+
+
+/* styles for gallary page */
+.stars{
+  display: flex;
+  padding: 1rem;
+}
+.stars li{
+  list-style: none;
+}
+
+.stars li{
+  text-indent: -9999px;
+  font-size: 1.5rem;
+}
+
+.stars li:not(:last-child){
+  color: #009ad8;
+} 
+
+.stars li::before{
+  content: "\f005";
+  float: right;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  text-indent: 0;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding-bottom: 10%;
+  padding-top: 6%;
+  
+}
+.cards>li{
+  width: 48%;
+  border-radius: 1.5rem;
+  background-color: #262936;
+  margin: 1%;
+  overflow: hidden;
+}
+
+.cards>li figure{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.cards>li figure img{
+  width: 100%;
+  height: 100%;
+}
+.contents{
+  display: inline-block;
+  width: 50%;
+  color: #fff;
+  padding: 1rem;
+}
+
+.contents h2{
+  font-size: 2rem;
+  padding: 1rem 0rem;
+  opacity: .8;
+}
+.contents p{
+  font-size: 2rem;
+  letter-spacing: .5px;
+  opacity: .5;
+}
+
+.gallarycards{
+  background-color: #1e202b;
+}
+
+.navigation{
+  background-color: #1e202b;
+}
+
+.sitebar{
+  background-color: #262936;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2.5rem;
+  padding: 1.8rem;
+  color: #fff;
+}
+
+.sitebar span{
+  padding: .5rem;
+  font-size: 1.2rem;
+  opacity: .6;
+}
+
+.sitebar span:last-child::before{
+  content: "\2192";
+  padding-right: 1rem;
+  opacity: .5;
+  font-size: 1.5rem;
+} 
+/* new styles ends here  */
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
@@ -798,6 +954,7 @@ footer p{
   nav{
     width: 100%;
     text-align: center;
+    display: none;
   }
   .navbar{
     margin: 5rem 0px .5rem 0px;
@@ -837,6 +994,9 @@ footer p{
 }
 
 @media only screen and (max-width: 768px) {
+  header{
+    padding-bottom: 6rem;
+  }
   html{
     font-size: 40%;
   }
@@ -856,11 +1016,58 @@ footer p{
   .navbar{
     margin: 9rem 0px .5rem 0px;
   }
+  .cards{
+    flex-direction: column;
+  }
+
+  .cards > li{
+    width: 98%;
+  }
+
+  .contents h2{
+    font-size: 4rem;
+  }
+  .contents p{
+    font-size: 3.5rem;
+  }
+
 }
 
 @media only screen and (max-width: 645px) {
+  header{
+    padding-bottom: 6rem;
+  }
+
+  .weathersection{
+    height: 60rem;
+  }
   .weather_card{
     width: 93%;
+  }
+  .card-conatiner{
+    padding: 2%;
+  }
+  .weather_card .days {
+    padding: 3.5rem 1.1rem;
+  }
+  
+
+  #city{
+    font-size: 3rem;
+  }
+
+  .weather_card .days{
+    font-size: 2rem;
+  }
+  .wind span{
+    font-size: 3rem;
+  }
+  #temp{
+    font-size: 15rem;
+  }
+  .weather_icon{
+    display: block;
+    width: 25%;
   }
   .searchbar{
     width: 93%;
@@ -957,5 +1164,10 @@ footer p{
     width: 6rem;
     height: 6rem;
     margin-left: 0.5rem;
+  }
+
+  #error h2, #error span{
+    font-size: 4rem;
+    text-align: center;
   }
 }
