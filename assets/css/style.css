@@ -159,6 +159,10 @@ sub { bottom: -.25em; }
   box-sizing: border-box;
 }
 
+html{
+  font-size: 10px;
+}
+
 /* fonts */
 @font-face {
   font-family: 'Roboto';
@@ -167,6 +171,7 @@ sub { bottom: -.25em; }
 
 body{
   font-family:"Roboto",sans-serif;
+  
 }
 
 /* wrapper */
@@ -180,7 +185,7 @@ body{
 header{background-color: #1e202b;}
 
 header .wrapper {
-  padding: 50px 0px 40px 0px;
+  padding: 5rem 0px 4rem 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,23 +197,23 @@ header .wrapper {
 /* logo starts here */
 }
 .logo h1{
-  float: left;
   width: 27%;
-  padding-right: 10px;
+  padding-right: 1rem;
+  float: left;
 }
 
 .logo span{
   color: #fff;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: "Roboto",sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
 .logo p{
-  padding-top: 7px;
+  padding-top: .7rem;
   color: #fff;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: "Roboto",sans-serif;
   opacity: .5;
 }
@@ -223,25 +228,24 @@ header .wrapper {
   list-style: none;
 }
 
-.navbar > li{
-  list-style-position: inside;
-}
-
 .navbar >li >a{
-  padding: 7px 24px;
-  margin: 0 7px;
+  padding: .7rem 2rem;
+  margin: 0 .7rem;
   position: relative;
   color: #fff;
   font-size: 12px;
   font-family: "Roboto",sans-serif;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
   text-decoration: none;
   text-transform: capitalize;
   opacity: .8;
 }
-
-.navbar >li >a::before,.active{
+.active{
+  border: 2px solid #009ad8;
+  border-radius: 1.5rem;
+}
+.navbar >li >a::before{
   content: "";
   position: absolute;
   top: 0;
@@ -250,14 +254,14 @@ header .wrapper {
   height: 0px;
   border-top: 2px solid #009ad8;
   border-left: 2px solid #009ad8;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   transform-origin: left;
   transition: .5s;
   box-sizing: border-box;
   opacity: 0;
 }
 
-.navbar >li >a::after,.active{
+.navbar >li >a::after{
   content: "";
   position: absolute;
   bottom: 0;
@@ -266,20 +270,20 @@ header .wrapper {
   height: 0px;
   border-bottom: 2px solid #009ad8;
   border-right: 2px solid #009ad8;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   transform-origin: left;
   transition: .5s;
   box-sizing: border-box;
   opacity: 0;
 }
 
-.navbar >li >a:hover::before,.active{
+.navbar >li >a:not(.active):hover::before{
   width: 100%;
   height: 100%;
   opacity: 1;
 }
 
-.navbar >li >a:hover::after{
+.navbar >li >a:not(.active):hover::after{
   width: 100%;
   height: 100%;
   opacity: 1;
@@ -288,9 +292,9 @@ header .wrapper {
 /* header ends here */
 
 .weathersection{
-  height: 330px;
+  height: 33rem;
   width: 100%;
-  background: url(../images/photo-9@2x.jpg);
+  background: url(../images/banner@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -300,44 +304,46 @@ header .wrapper {
   position: relative;
 }
 .searchbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 5px;
   width: 79%;
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: 50%;
   background: #1e202b;
-  border-radius: 20px;
-  line-height: 25px;
+  border-radius: 2rem;
+  line-height: 2.5rem;
   transform: translate(-50%,-50%);
 }
 
-#searchweather{
-  width: 8%;
-  padding: 10px;
-  border: none;
-  float: right;
-  background-color: #009ad8;
-  border-radius: 20px;
+.searchbar input[type="text"]{
+  padding-left: 2%;
+  width: 70%;
   color: #fff;
-  font-weight: 600;
+  background-color: inherit;
   outline: none;
+  border: none;
 }
 
-#inputweather{
-  width: 90%; 
-  padding-left: 10px;
+.searchbar input[type="submit"]{
+  padding: 10px;
+  min-width: 70px;
+  width: 10%;
+  height: 100%;
   border: none;
-  border-radius: 20px;
+  border-radius: 5rem;
+  float: right;
   outline: none;
-  background-color: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 35px;
+  color: #fff;
+  background-color: #009ad8;
 }
+
 
 .weather_card{
   width: 40%;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   position: absolute;
   bottom: 0%;
   left: 50%;
@@ -346,16 +352,49 @@ header .wrapper {
   overflow: hidden;
 }
 
+#error{
+  padding: 5% 3%;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 80%;
+  background-color: #323544;
+  visibility: hidden;
+  color: #009ad8;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+#error h2, #error span{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+#error img{
+  padding: 1rem;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  height: 80%;
+}
+
 .weather_card .days{
   background-color: #2d303d;
-  padding: 15px 11px;
-  font-size: 12px;
+  padding: 1.5rem 1.1rem;
+  font-size: 1.2rem;
   opacity: 0.8;
 }
 
 #month,#date{
   color: #fff;
-  padding-left: 5px;
+  padding-left: .5rem;
+}
+
+.weather_card .days div{
+  float: right;
 }
 
 .weather_card .days div{
@@ -370,7 +409,7 @@ header .wrapper {
 #city{
   margin-left: 3%;
   margin-top: 8%;
-  font-size: 17px;
+  font-size: 1.7rem;
   font-family: "Roboto",sans-serif;
   color: #fff;
   display: block;
@@ -379,22 +418,22 @@ header .wrapper {
   margin-left: 3%;
   margin-top: 3%;
   font-family: "Roboto",sans-serif;
-  font-size: 70px;
+  font-size: 7rem;
   color: #fff;
   font-weight: 900;
 }
 
 .weather_icon{
-  padding-left: 10px;
+  padding-left: 1rem;
   display: inline-block;
   width: 15%;
-  font-size: 70px;
+  font-size: 7rem;
 
 }
 
 .weather_icon >img{
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .wind{
@@ -411,7 +450,7 @@ header .wrapper {
 
 .wind span{
   color: #fff;
-  font-size: 12px;
+  font-size: 1.2rem;
   opacity: .6;
 }
 
@@ -428,12 +467,12 @@ header .wrapper {
 }
 
 .live_cameras .wrapper{
-  padding: 300px 0px 100px 0px;
+  padding: 22rem 0rem 6rem 0rem;
 }
 
 .live_cameras h2{
-  padding-left: 20px;
-  font-size: 30px;
+  padding-left: 2rem;
+  font-size: 3rem;
   font-family: "Roboto",sans-serif;
   color: #fff;
 
@@ -441,18 +480,18 @@ header .wrapper {
 
 .citycameras li{
   width: 25%;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .citycameras li h3{
-  padding-top: 20px;
-  font-size: 15px;
+  padding-top: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   opacity: .8;
 }
 
 .citycameras li span{
-  font-size: 10px;
+  font-size: 1rem;
   color: #fff;
   opacity: .8;
 }
@@ -463,7 +502,7 @@ header .wrapper {
 
 .cityimage{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .play{
@@ -485,7 +524,7 @@ header .wrapper {
 .weather_info{
   display: flex;
   list-style: none;
-  padding: 80px 0px;
+  padding: 7rem 0px;
 }
 
 .weather_info li{
@@ -493,13 +532,27 @@ header .wrapper {
 }
 
 .weather_info li span{
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #009ad8;
 }
 
-.weather_info li .content{
+.content{
   width: 80%;
   float: right;
+  color: #fff;
+}
+
+.content h2{
+  font-size: 1.4rem;
+  opacity: .9;
+}
+
+.content p{
+  font-size: 1.2rem;
+  padding: 1rem 2rem 1rem 0rem;
+  opacity: .6;
+  letter-spacing: .5px;
+  line-height: 1.8rem;
 }
 
 /* weatherdescription section ends here */
@@ -511,20 +564,20 @@ header .wrapper {
 }
 
 .appcontent{
-  padding: 80px 0px;
+  padding: 8rem 0px;
   display: flex;
   list-style: none;
 }
 
 .appcontent > li{
-  padding: 10px;
+  padding: 1rem;
   width: 33%;
   color: #fff;
 }
 
 .appcontent > li h2{
-  font-size: 32px;
-  padding-bottom: 20px;
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
   opacity: .8;
 }
 
@@ -534,18 +587,18 @@ header .wrapper {
 
 /* featurelist starts here */
 .feature_list h3{
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .feature_list h3::before{
   content: url(../images/arrow.png);
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 
 .feature_list p{
-  padding: 20px 0px 20px 22px;
-  font-size: 12px;
+  padding: 2rem 0px 2rem 2.2rem;
+  font-size: 1.2rem;
   opacity: .7;
 }
 
@@ -553,7 +606,7 @@ header .wrapper {
 
 /* weather_analysis starts here */
 .analysis_list li{
-  padding: 8px 0px;
+  padding: .8rem 0px;
   border-bottom: 1px solid #262936;
 }
 
@@ -564,13 +617,13 @@ header .wrapper {
 .analysis_list li a{
   text-decoration: none;
   color: #fff;
-  font-size: 12px;
+  font-size: 1.2rem;
   opacity: .7;
 }
 
 .analysis_list li a::before{
   content: url(../images/arrow.png);
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 /* weather_analysis ends here */
 
@@ -587,24 +640,25 @@ header .wrapper {
 
 .photo img{
   width: 100%;
-  padding: 5px;
+  padding: .5rem;
 }
 /* awesome_photos ends here */
 
 /* footer starts here */
 footer{
-  padding-top: 60px;
+  padding-top: 6rem;
   background-color: #262936;
 }
 
 
 .subscription{
-  padding: 3px;
+  padding: .3rem;
   width: 70%;
-  height: 50px;
-  border-radius: 50px;
+  height: 5rem;
+  border-radius: 5rem;
   background-color: #1e202b;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   float: left;
 }
@@ -622,12 +676,13 @@ footer{
   width: 10%;
   height: 100%;
   border: none;
-  border-radius: 50px;
+  border-radius: 5rem;
   float: right;
   outline: none;
   color: #fff;
   background-color: #009ad8;
 }
+
 
 
 .footer-social-icons{
@@ -641,8 +696,8 @@ footer{
 
 .footer-social-icons a{
   color:#009ad8 ;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -650,18 +705,23 @@ footer{
   text-indent: -9999px;
 }
 
+.footer-social-icons li:hover{
+  transform: scale(1.1);
+  transition: ease;
+}
+
 .footer-social-icons li{
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
+  width: 4rem;
+  height: 4rem;
+  margin-left: .5rem;
   background-color: #1e202b;
   border-radius: 50%;
   position: relative;
 }
 
 footer p{
-  padding: 30px 0px;
-  font-size: 12px;
+  padding: 3rem 0px;
+  font-size: 1.2rem;
   clear: both;
   color: #fff;
   opacity: .6;
@@ -718,6 +778,7 @@ footer p{
   border-radius: 20%;
   position: relative;
   font-size: 0px;
+  transition: .5s ease;
 }
 
 .hamburger-menu div::before,
@@ -729,6 +790,7 @@ footer p{
   height: inherit;
   background-color: #009ad8;
   border-radius: 20%;
+  transition: .5s ease;
 }
 
 .hamburger-menu div::before{
@@ -741,18 +803,137 @@ footer p{
 
 .change.hamburger-menu div::before{
   transform: translateY(0) rotate(-45deg);
+  transition: .5s ease;
 }
 
 .change.hamburger-menu div::after{
   transform: translateY(0) rotate(45deg);
+  transition: .5s ease;
 }
 
 .change.hamburger-menu div{
   background-color: transparent;
+  
 }
+
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #1e202b
+              url(../images/Eclipse-1s-200px.gif) no-repeat center;
+  z-index: 9999;
+}
+
+
+/* styles for gallary page */
+.stars{
+  display: flex;
+  padding: 1rem;
+}
+.stars li{
+  list-style: none;
+}
+
+.stars li{
+  text-indent: -9999px;
+  font-size: 1.5rem;
+}
+
+.stars li:not(:last-child){
+  color: #009ad8;
+} 
+
+.stars li::before{
+  content: "\f005";
+  float: right;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  text-indent: 0;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding-bottom: 10%;
+  padding-top: 6%;
+  
+}
+.cards>li{
+  width: 48%;
+  border-radius: 1.5rem;
+  background-color: #262936;
+  margin: 1%;
+  overflow: hidden;
+}
+
+.cards>li figure{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.cards>li figure img{
+  width: 100%;
+  height: 100%;
+}
+.contents{
+  display: inline-block;
+  width: 50%;
+  color: #fff;
+  padding: 1rem;
+}
+
+.contents h2{
+  font-size: 2rem;
+  padding: 1rem 0rem;
+  opacity: .8;
+}
+.contents p{
+  font-size: 2rem;
+  letter-spacing: .5px;
+  opacity: .5;
+}
+
+.gallarycards{
+  background-color: #1e202b;
+}
+
+.navigation{
+  background-color: #1e202b;
+}
+
+.sitebar{
+  background-color: #262936;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2.5rem;
+  padding: 1.8rem;
+  color: #fff;
+}
+
+.sitebar span{
+  padding: .5rem;
+  font-size: 1.2rem;
+  opacity: .6;
+}
+
+.sitebar span:last-child::before{
+  content: "\2192";
+  padding-right: 1rem;
+  opacity: .5;
+  font-size: 1.5rem;
+} 
+/* new styles ends here  */
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  html{
+    font-size: 50%;
+  }
+
   .wrapper {
     width: 95%; 
     margin: 0 auto;
@@ -761,8 +942,8 @@ footer p{
   .hamburger-menu{
     display: flex;
     position: absolute;
-    top: 30px;
-    right: 10px;
+    top: 3rem;
+    right: 1rem;
   }
 
   header .wrapper{
@@ -773,9 +954,10 @@ footer p{
   nav{
     width: 100%;
     text-align: center;
+    display: none;
   }
   .navbar{
-    margin: 30px 0px 5px 0px;
+    margin: 5rem 0px .5rem 0px;
     border-radius: 15px;
     background-color: #262936 ;
     color: white;
@@ -808,5 +990,184 @@ footer p{
     position: absolute;
     top: 30px;
     left: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header{
+    padding-bottom: 6rem;
+  }
+  html{
+    font-size: 40%;
+  }
+
+  .logo h1{
+    width: 35%;
+  }
+  .logo span{
+    font-size: 3rem;
+  }
+  .logo p{
+    font-size: 1.4rem;
+  }
+  .hamburger-menu{
+    top: 4rem;
+  }
+  .navbar{
+    margin: 9rem 0px .5rem 0px;
+  }
+  .cards{
+    flex-direction: column;
+  }
+
+  .cards > li{
+    width: 98%;
+  }
+
+  .contents h2{
+    font-size: 4rem;
+  }
+  .contents p{
+    font-size: 3.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 645px) {
+  header{
+    padding-bottom: 6rem;
+  }
+
+  .weathersection{
+    height: 60rem;
+  }
+  .weather_card{
+    width: 93%;
+  }
+  .card-conatiner{
+    padding: 2%;
+  }
+  .weather_card .days {
+    padding: 3.5rem 1.1rem;
+  }
+  
+
+  #city{
+    font-size: 3rem;
+  }
+
+  .weather_card .days{
+    font-size: 2rem;
+  }
+  .wind span{
+    font-size: 3rem;
+  }
+  #temp{
+    font-size: 15rem;
+  }
+  .weather_icon{
+    display: block;
+    width: 25%;
+  }
+  .searchbar{
+    width: 93%;
+    border-radius: 5rem;
+  }
+  #searchweather{
+    width: 10%;
+  }
+  .citycameras{
+    flex-direction: column;
+  }
+
+  .citycameras li{
+    width: 100%;
+  }
+
+  .live_cameras h2{
+    font-size: 8rem;
+    font-family: "Roboto",sans-serif;
+  }
+
+  .citycameras li h3{
+    font-size: 3.5rem;
+  }
+  .citycameras li span{
+    font-size: 2rem;
+    line-height: 6rem;
+  }
+  .live_cameras .wrapper {
+    padding: 33rem 0rem 15rem 0rem;
+  }
+  .weather_info {
+    flex-direction: column;
+    padding: 10rem 0px;
+  }
+  .weather_info li {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .weather_info li span {
+    font-size: 4.5rem;
+  }
+  .content h2 {
+    font-size: 3rem;
+  }
+  .content{
+    width: 83%;
+  }
+  .content p {
+    font-size: 2.5rem;
+    padding: 1rem 4rem 1rem 0rem;
+    letter-spacing: 0.25px;
+    line-height: 5rem;
+  }
+  .appcontent {
+    flex-direction: column;
+  }
+  .appcontent > li {
+    padding: 1rem;
+    width: 100%;
+  }
+  .appcontent > li h2 {
+    font-size: 6.5rem;
+  }
+  .feature_list h3 {
+    font-size: 3rem;
+    letter-spacing: .1rem;
+  }
+  .feature_list p {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .analysis_list li a {
+    font-size: 2.2rem;
+  }
+
+  .subscription {
+    padding: .5rem;
+    width: 100%;
+    height: 7rem;
+    
+  }
+
+  .subscription input[type="submit"] {
+    width: 30%;
+  }
+
+  .footer-social-icons {
+    float: left;
+    padding-top: 3rem;
+  }
+  .footer-social-icons li {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 0.5rem;
+  }
+
+  #error h2, #error span{
+    font-size: 4rem;
+    text-align: center;
   }
 }
