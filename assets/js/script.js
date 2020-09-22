@@ -1,15 +1,6 @@
 /* Author: 
 
 */
-
-// var stars = document.querySelectorAll('.star');
-
-// for(x=0;x<stars.length;x++){
-//     stars[x].addEventListener("click",()=>{
-//         console.log("I am click")
-//     })
-// }
-
 // hamberger menu starts here
 document.querySelector('.hamburger-menu').addEventListener('click',()=>{
     var navbar = document.querySelector('nav');
@@ -125,6 +116,7 @@ window.addEventListener("load",()=>{
     getweatherreport('mumbai')
 })
 
+// preloader starts here
 var preloader = document.getElementById('loading');
 preloader.addEventListener("load",myfunction());
 function myfunction(){
