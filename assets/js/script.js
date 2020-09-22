@@ -1,26 +1,34 @@
 /* Author: 
 
 */
+
+// var stars = document.querySelectorAll('.star');
+
+// for(x=0;x<stars.length;x++){
+//     stars[x].addEventListener("click",()=>{
+//         console.log("I am click")
+//     })
+// }
+
+// hamberger menu starts here
 document.querySelector('.hamburger-menu').addEventListener('click',()=>{
     var navbar = document.querySelector('nav');
     if (navbar.style.display == "flex"){
         navbar.style.display = "none";
         document.querySelector('.hamburger-menu').classList.remove("change")
-        
     } else {
         navbar.style.display = "flex";
         document.querySelector('.hamburger-menu').classList.add("change")
     }
   })
+// hamberger menu ends here
 
-//   api key=e7ae8a8e31b4cae3a42e7f8abfe1614a
-
+// weather api starts here
 const weatherApi ={
     key:"e7ae8a8e31b4cae3a42e7f8abfe1614a",
     baseUrl:"https://api.openweathermap.org/data/2.5/weather"
 }
 
-// annononus function
 var srchbox =document.getElementById('inputweather');
 var searchweather =document.getElementById('searchweather');
 srchbox.addEventListener('keypress',(event)=>{
@@ -39,26 +47,18 @@ function getweatherreport(city){
         if (weather.status >= 200 && weather.status <= 299) {
             document.querySelector('#error').style.visibility = 'hidden';
         return weather.json();
-        
         }
         else {
-            var citiesss = document.getElementById('city');
-            // document.querySelector('.card-conatiner').innerHTML = `<h2>Data not found for ${city}</h2>`
             document.querySelector('#errors').innerHTML = `${city}`;
             document.querySelector('#error').style.visibility = 'visible';
-            // citiesss.innerText = `Data not found for ${city}`
         }
     }).then(showweatherreport);
 
 }
 
 function showweatherreport(weathers){
-    console.log(weathers);
     var city = document.getElementById('city');
     var temp = document.getElementById('temp');
-    city.innerText =`${weathers.name},${weathers.sys.country}`;
-    temp.innerHTML =`${Math.round(weathers.main.temp)}&deg;C`;
-
     var date = document.getElementById('date');
     var day = document.getElementById('day');
     var months = document.getElementById('month');
@@ -67,17 +67,13 @@ function showweatherreport(weathers){
     var humidities = document.getElementById('humidity');
     var compass = document.getElementById('compass');
     var todaydate =new Date();
-
-    console.log(todaydate);
-    console.log(datemanage(todaydate));
     var dateformat = datemanage(todaydate);
-
+    city.innerText =`${weathers.name},${weathers.sys.country}`;
+    temp.innerHTML =`${Math.round(weathers.main.temp)}&deg;C`;
     date.innerText = dateformat[0]
     day.innerText = dateformat[1]
-    
     months.innerHTML = dateformat[2]
-
-    const {id,main} = weathers.weather[0];
+    const {id} = weathers.weather[0];
     const {speed,deg} = weathers.wind;
     const {humidity} = weathers.main;
 
@@ -117,7 +113,7 @@ function showweatherreport(weathers){
 
 function datemanage(datearg){
     var days  = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var date = datearg.getDate();
     var day = days[datearg.getDay()];
     var month = months[datearg.getMonth()];
@@ -130,9 +126,13 @@ window.addEventListener("load",()=>{
 })
 
 var preloader = document.getElementById('loading');
+preloader.addEventListener("load",myfunction());
 function myfunction(){
     preloader.style.display='none';
 }
+
+
+
 
 
 
