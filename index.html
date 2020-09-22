@@ -4,42 +4,30 @@
   <head>
     <meta charset="utf-8">
     <title>Weather_Check_Application</title>
-  
-    <!-- 120 word description for SEO purposes goes here. Note: Usage of lang tag. -->
     <meta name="description" lang="en" content="Weather check application which shows your city weather">
-    
-    <!-- Keywords to help with SEO go here. Note: Usage of lang tag.  -->
-    <meta name="keywords" lang="en" content="weather_check,city weather,temperature,">
-    
-    <!-- View-port Basics: http://mzl.la/VYREaP -->
-    <!-- This meta tag is used for mobile device to display the page without any zooming,
-        so how much the device is able to fit on the screen is what's shown initially. 
-        Remove comments from this tag, when you want to apply media queries to the website. -->
+    <meta name="keywords" lang="en" content="weather_check,city weather,temperature,"> 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <!-- To adhear no-cache for Chrome -->
-    <!-- <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-store, no-cache" />
-    <meta http-equiv="Expires" content="0" /> -->
-
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-    <link rel="shortcut icon" href="favicon.ico" />
-
+    <link rel="shortcut icon" href="favicon.ico"/>
     <!--font-awesome link for icons-->
     <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
-    <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" >
   </head>
   <body>
+    <!-- preloader for website -->
+    <div id="loading">Preloader</div>
+    <!-- preloader ends here -->
     <!--container starts here-->
     <div class="container">
       <!--header starts here-->
       <header>
         <div class="wrapper">
           <div class="logo">
-            <h1><a href="index.html" title="HomePage"><img src="assets/images/logo@2x.png" alt="WeatherFinder"></a></h1>
+            <h1>
+              <a href="index.html" title="HomePage">
+                <img src="assets/images/logo@2x.png" alt="WeatherFinder">
+              </a>
+            </h1>
             <span>WeatherFinder</span>
             <p>tagline goes here</p>
           </div>
@@ -48,46 +36,63 @@
               <li><a href="index.html" title="Home" class="active">Home</a></li>
               <li><a href="#FIXME" title="News">News</a></li>
               <li><a href="#FIXME" title="Live_cameras">Live cameras</a></li>
-              <li><a href="#FIXME" title="Photos">Photos</a></li>
+              <li><a href="gallery.html " title="Photos">Photos</a></li>
               <li><a href="#FIXME" title="Contact">Contact</a></li>
             </ul>
           </nav>
+          <!-- hamberger menu starts here -->
+          <div class="hamburger-menu">
+            <div>hamberger</div>
+          </div>
+          <!-- hamberger menu ends here -->
         </div>
       </header>
       <!--header ends here-->
       <!--main starts here-->
       <main>
+        <!-- weathersection starts here -->
         <section class="weathersection">
           <div class="wrapper">
             <div class="searchbar">
               <input id="inputweather" type="text" name="search" placeholder="Find your location...">
               <input id="searchweather" type="submit" value="Find">
             </div>
+            <!-- weather card starts here -->
             <div class="weather_card">
               <div class="days">
                 <span id="day">Monday</span>
-                <span id="date">6 oct</span>
+                <div><span id="date">6</span><span id="month">oct</span></div>
               </div>
-              <span id="city">New York</span>
-              <span id="temp">23<span>&#8451;</span></span>
-              <span class="weather_icon"><img src="assets/images/icons/icon-1.svg" alt="weather_icon"></span>
-              <ul class="wind">
-                <li class="humidity">
-                  <img src="assets/images/icon-umberella@2x.png" alt="Humidity">
-                  <span>20%</span> 
-                </li>
-                <li class="wind_speed">
-                  <img src="assets/images/icon-wind@2x.png" alt="wind_speed">
-                  <span>18km/hr</span> 
-                </li>
-                <li class="compass">
-                  <img src="assets/images/icon-compass@2x.png" alt="Humidity">
-                  <span>east</span> 
-                </li>
-              </ul>
+              <div class="card-conatiner">
+                <span id="city">New York</span>
+                <span id="temp">23<span>&#8451;</span></span>
+                <span class="weather_icon"><img src="assets/images/icons/icon-1.svg" alt="weather_icon" id="weathericon"></span>
+                <ul class="wind">
+                  <li class="humidity">
+                    <img src="assets/images/icon-umberella@2x.png" alt="Humidity">
+                    <span id="humidity">20</span><span>%</span>
+                  </li>
+                  <li class="wind_speed">
+                    <img src="assets/images/icon-wind@2x.png" alt="wind_speed">
+                    <span id="windspeed">18</span><span>km/hr</span>
+                  </li>
+                  <li class="compass">
+                    <img src="assets/images/icon-compass@2x.png" alt="Humidity">
+                    <span id="compass">east</span> 
+                  </li>
+                </ul>
+                <!-- error massege -->
+                <div id="error"><h2>Opps!! Data not found for <span id="errors">City</span></h2>
+                  <img src="assets/images/not-found.png" alt="error massege">
+                </div>
+                <!-- error massege ends here -->
+              </div>
             </div>
+            <!-- weather card ends here -->
           </div>
         </section>
+        <!-- weather section ends here -->
+        <!-- live camera section starts here -->
         <section class="live_cameras">
           <div class="wrapper">
             <h2>Live cameras</h2>
@@ -127,36 +132,40 @@
             </ul>
           </div>
         </section>
+        <!-- live camera section ends here -->
+        <!-- weatherdescription section starts here -->
         <section class="weatherdescription">
           <div class="wrapper">
             <ul class="weather_info">
               <li>
                 <span>6.10</span>
                 <div class="content">
-                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, perspiciatis.</h2>
+                  <h2>Doloremque laudantium totam sequi</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente, ipsam adipisci accusantium dolorum itaque eos repellendus, vel quo dicta ab mollitia incidunt iusto tenetur, error cum quia tempore sint.</p>
-                  <img src="assets/images/arrow@2x.png" alt="arrow">
+                  <img src="assets/images/arrow.png" alt="arrow">
                 </div>
               </li>
               <li>
                 <span>6.10</span>
                 <div class="content">
-                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, perspiciatis.</h2>
+                  <h2>Doloremque laudantium totam sequi</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente, ipsam adipisci accusantium dolorum itaque eos repellendus, vel quo dicta ab mollitia incidunt iusto tenetur, error cum quia tempore sint.</p>
-                  <img src="assets/images/arrow@2x.png" alt="arrow">
+                  <img src="assets/images/arrow.png" alt="arrow">
                 </div>
               </li>
               <li>
                 <span>6.10</span>
                 <div class="content">
-                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, perspiciatis.</h2>
+                  <h2>Doloremque laudantium totam sequi</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente, ipsam adipisci accusantium dolorum itaque eos repellendus, vel quo dicta ab mollitia incidunt iusto tenetur, error cum quia tempore sint.</p>
-                  <img src="assets/images/arrow@2x.png" alt="arrow">
+                  <img src="assets/images/arrow.png" alt="arrow">
                 </div>
               </li>
             </ul>
           </div>
         </section>
+        <!-- weatherdescription section ends here -->
+        <!-- app content section starts here -->
         <section class="app_contents">
           <div class="wrapper">
             <ul class="appcontent">
@@ -242,6 +251,7 @@
             </ul>
           </div>
         </section>
+        <!-- app content section ends here -->
       </main>
       <!--main ends here-->
 
@@ -255,8 +265,8 @@
           <ul class="footer-social-icons">
             <li><a href="https://facebook.com" title="facebook" target="_blank" class="fb">fb</a></li>
             <li><a href="https://twitter.com" title="twitter" target="_blank" class="twitter">twitter</a></li>
-            <li><a href="https://google.com" title="googleplus" target="_blank" class="gplus">googleplus</i></a></li>
-            <li><a href="https://www.pinterest.com/" title="pinterest" target="_blank" class="pinterest">pinterest</a></li> 					
+            <li><a href="https://google.com" title="googleplus" target="_blank" class="gplus">googleplus</a></li>
+            <li><a href="https://www.pinterest.com/" title="pinterest" target="_blank" class="pinterest">pinterest</a></li>           
           </ul>
           <p>Copyright 2020 company name.designed by Themezy.All rights reserved</p>
 
